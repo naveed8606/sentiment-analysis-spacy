@@ -27,3 +27,4 @@ This project performs sentiment classification using NLP preprocessing with spaC
 ## How to Run
 pip install -r requirements.txt
 python main.py
+python -m spacy download en_core_web_sm
