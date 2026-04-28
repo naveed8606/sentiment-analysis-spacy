@@ -58,6 +58,11 @@ python main.py
 ```
 
 ---
+## 🚀 Run Streamlit App
+
+```bash
+streamlit run app.py
+```
 
 ##  Sample Output
 
