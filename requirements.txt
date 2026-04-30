@@ -9,4 +9,4 @@ catalogue==2.0.10
 cymem==2.0.8
 preshed==3.0.9
 murmurhash==1.0.10
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.2/en_core_web_sm-3.7.2-py3-none-any.whl
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
