@@ -1,3 +1,5 @@
+import subprocess
+
 import streamlit as st
 import pandas as pd
 import spacy
@@ -24,6 +26,9 @@ if "user_input" not in st.session_state:
 # LOAD MODEL (CACHED)
 @st.cache_resource
 def load_model():
+    # install model if not present
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+
     nlp = spacy.load("en_core_web_sm")
 
     url = "https://raw.githubusercontent.com/laxmimerit/All-CSV-ML-Data-Files-Download/master/IMDB-Dataset.csv"
