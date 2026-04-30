@@ -1,7 +1,14 @@
 streamlit
 scikit-learn
-spacy>=3.7.2,<3.8.0
-thinc>=8.2.0,<8.3.0
-blis>=0.7.11,<0.8.0
 requests
+
+spacy==3.7.2
+thinc==8.2.2
+blis==0.7.11
+srsly==2.4.8
+catalogue==2.0.10
+cymem==2.0.8
+preshed==3.0.9
+murmurhash==1.0.10
+
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
