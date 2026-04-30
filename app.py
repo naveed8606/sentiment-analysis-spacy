@@ -1,16 +1,13 @@
-import subprocess
-
 import streamlit as st
-import pandas as pd
 import spacy
 import random
+import csv
+import requests
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
-#PAGE CONFIG 
 st.set_page_config(page_title="Sentiment Analyzer", page_icon="🎬", layout="centered")
 
-# SIDEBAR
 st.sidebar.title("ℹ️ About")
 st.sidebar.write("""
 This app analyzes movie reviews and predicts sentiment.
@@ -19,23 +16,23 @@ Model: Logistic Regression
 Data: IMDb Dataset  
 """)
 
-#SESSION STATE
 if "user_input" not in st.session_state:
     st.session_state.user_input = ""
 
-# LOAD MODEL (CACHED)
 @st.cache_resource
 def load_model():
-    # install model if not present
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-
     nlp = spacy.load("en_core_web_sm")
 
     url = "https://raw.githubusercontent.com/laxmimerit/All-CSV-ML-Data-Files-Download/master/IMDB-Dataset.csv"
-    df = pd.read_csv(url)
+    
+    response = requests.get(url)
+    lines = response.text.splitlines()
+    reader = csv.DictReader(lines)
 
-    df.rename(columns={"review": "text", "sentiment": "label"}, inplace=True)
-    df = df.sample(20000, random_state=42)
+    data = list(reader)
+
+    texts = [row["review"] for row in data][:20000]
+    labels = [row["sentiment"] for row in data][:20000]
 
     def preprocess_text(text):
         doc = nlp(text)
@@ -45,17 +42,17 @@ def load_model():
             if not token.is_stop and not token.is_punct
         ])
 
-    df["cleaned"] = df["text"].apply(preprocess_text)
+    cleaned = [preprocess_text(t) for t in texts]
 
     vectorizer = TfidfVectorizer(
-        ngram_range=(1,2),
+        ngram_range=(1, 2),
         max_features=5000,
         max_df=0.9,
         min_df=5
     )
 
-    X = vectorizer.fit_transform(df["cleaned"])
-    y = df["label"]
+    X = vectorizer.fit_transform(cleaned)
+    y = labels
 
     model = LogisticRegression(max_iter=200)
     model.fit(X, y)
@@ -64,7 +61,6 @@ def load_model():
 
 nlp, vectorizer, model = load_model()
 
-#PREPROCESS
 def preprocess_text(text):
     doc = nlp(text)
     return " ".join([
@@ -73,7 +69,6 @@ def preprocess_text(text):
         if not token.is_stop and not token.is_punct
     ])
 
-#EXAMPLES
 examples = {
     "Positive": [
         "Amazing movie!",
@@ -85,12 +80,7 @@ examples = {
         "The acting, direction, and storyline were all top-notch.",
         "A masterpiece with emotional depth and stunning visuals.",
         "I was completely engaged and loved every moment of it.",
-        "An outstanding performance by the entire cast.",
-        "The film delivers a powerful and inspiring message.",
-        "Beautifully executed with a compelling narrative.",
-        "One of the best movies I have watched this year.",
-        "A perfect blend of drama, emotion, and entertainment.",
-        "Highly recommended for anyone who loves good cinema."
+        "An outstanding performance by the entire cast."
     ],
     "Negative": [
         "Terrible movie.",
@@ -102,29 +92,15 @@ examples = {
         "The story was weak and the pacing was painfully slow.",
         "I regret watching this, it was a complete waste of time.",
         "The acting was terrible and the plot made no sense.",
-        "One of the worst films I have ever seen.",
-        "The movie started okay but became unbearable quickly.",
-        "Poor direction and a very predictable storyline.",
-        "It failed to keep me interested at any point.",
-        "Completely overrated and not enjoyable at all.",
-        "A dull and lifeless movie experience."
+        "One of the worst films I have ever seen."
     ]
 }
 
-# UI
-st.markdown(
-    "<h1 style='text-align: center;'>🎬 Sentiment Analysis App</h1>",
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    "<p style='text-align: center; color: gray;'>Analyze movie reviews instantly using NLP</p>",
-    unsafe_allow_html=True
-)
+st.markdown("<h1 style='text-align: center;'>🎬 Sentiment Analysis App</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: gray;'>Analyze movie reviews instantly using NLP</p>", unsafe_allow_html=True)
 
 st.divider()
 
-#EXAMPLE SELECTOR 
 st.markdown("### 🔹 Try an example")
 
 category = st.selectbox("Choose type:", ["Positive", "Negative"])
@@ -145,7 +121,6 @@ with col2:
         random_category = random.choice(list(examples.keys()))
         st.session_state.user_input = random.choice(examples[random_category])
 
-# INPUT 
 with st.form(key="sentiment_form"):
     user_input = st.text_area(
         "Enter your review:",
@@ -156,11 +131,8 @@ with st.form(key="sentiment_form"):
 
     submit_button = st.form_submit_button("🔍 Analyze")
 
-# RESULT
 if submit_button:
-
     if user_input.strip():
-
         with st.spinner("Analyzing sentiment..."):
             cleaned = preprocess_text(user_input)
             vectorized = vectorizer.transform([cleaned])
@@ -176,7 +148,6 @@ if submit_button:
             st.error("😞 Negative Sentiment")
 
         st.metric("Confidence", f"{confidence:.2f}")
-
     else:
         st.warning("⚠️ Please enter some text")
 
