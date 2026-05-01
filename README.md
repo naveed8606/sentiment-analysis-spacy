@@ -206,16 +206,16 @@ This app is deployed on **Render** as a Web Service. Here's how it was configure
 
 Here's what I plan to add to make this project more powerful:
 
-- [ ] 🤖 **Upgrade to BERT / Transformer models** for higher accuracy (90%+)
-- [ ] 📊 **Multi-class sentiment** — Very Positive / Neutral / Negative / Very Negative
-- [ ] 🌐 **Multi-language support** — Tamil, Hindi, Arabic, French
-- [ ] 🔌 **REST API** — Build a Flask/FastAPI backend so other apps can integrate this model
-- [ ] 📡 **Real-time Twitter/X sentiment dashboard** — Live feed analysis
-- [ ] 🏷️ **Domain-specific models** — Train separate models for medical, finance, food reviews
-- [ ] 📈 **Confidence score display** — Show how certain the model is (e.g. 92% Positive)
-- [ ] 🗄️ **Database integration** — Save and track all predictions over time
-- [ ] 📱 **Mobile-friendly UI** — Improve the Streamlit layout for mobile users
-- [ ] ☁️ **Upgrade hosting** — Move to AWS / GCP for faster cold starts and better reliability
+- [ ]  **Upgrade to BERT / Transformer models** for higher accuracy (90%+)
+- [ ]  **Multi-class sentiment** — Very Positive / Neutral / Negative / Very Negative
+- [ ]  **Multi-language support** — Tamil, Hindi, Arabic, French
+- [ ]  **REST API** — Build a Flask/FastAPI backend so other apps can integrate this model
+- [ ]  **Real-time Twitter/X sentiment dashboard** — Live feed analysis
+- [ ]  **Domain-specific models** — Train separate models for medical, finance, food reviews
+- [ ]  **Confidence score display** — Show how certain the model is (e.g. 92% Positive)
+- [ ]  **Database integration** — Save and track all predictions over time
+- [ ]  **Mobile-friendly UI** — Improve the Streamlit layout for mobile users
+- [ ]  **Upgrade hosting** — Move to AWS / GCP for faster cold starts and better reliability
 
 ---
 
