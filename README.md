@@ -246,7 +246,7 @@ Contributions are welcome! If you'd like to improve this project:
 
 ## 👨‍💻 Author
 
-**Naveed**
+**Naveed Nihan**
 
 - 🔗 GitHub: [@naveed8606](https://github.com/naveed8606)
 - 💼 LinkedIn: [Connect with me](https://www.linkedin.com/in/)
