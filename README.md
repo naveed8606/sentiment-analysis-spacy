@@ -9,7 +9,7 @@
 
 > A machine learning web application that analyzes movie reviews and predicts whether the sentiment is **Positive** or **Negative** — deployed live on the internet.
 
-🔗 **Live App**: [https://sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)
+ **Live App**: [https://sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)
 
 ---
 
@@ -18,22 +18,22 @@
 
 Businesses receive **thousands of customer reviews every day**. Manually reading and categorizing each one as positive or negative is:
 
-- ⏱️ Time-consuming
-- 💸 Expensive
-- ❌ Inconsistent and prone to human error
+-  Time-consuming
+-  Expensive
+-  Inconsistent and prone to human error
 
 There is a clear need for an **automated, scalable, and intelligent system** that can instantly understand the sentiment behind any piece of text.
 
 ---
 
-## ✅ Solution
+##  Solution
 
 This app uses **Natural Language Processing (NLP)** and **Machine Learning** to:
 
 1. Accept any movie or product review as input
 2. Preprocess the text using spaCy (lemmatization + stopword removal)
 3. Convert text into numerical features using TF-IDF vectorization
-4. Predict the sentiment as **Positive ✅** or **Negative ❌** in real time
+4. Predict the sentiment as **Positive** or **Negative** in real time
 
 No manual effort. No delays. Instant results.
 
@@ -41,7 +41,7 @@ No manual effort. No delays. Instant results.
 
 ##  Live Demo
 
-🚀 Try the app live here: **[https://sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)**
+ Try the app live here: **[https://sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)**
 
 > ⚠️ Note: The app is hosted on Render's free tier. It may take a while to wake up if it has been inactive. Please be patient on the first load.
 
@@ -49,10 +49,10 @@ No manual effort. No delays. Instant results.
 
 | Review | Predicted Sentiment |
 |--------|-------------------|
-| "This movie was absolutely amazing, I loved every moment!" | ✅ Positive |
-| "This was the worst film I've ever seen. Completely boring." | ❌ Negative |
-| "The acting was brilliant and the storyline kept me hooked." | ✅ Positive |
-| "Terrible script, bad direction. Total waste of time." | ❌ Negative |
+| "This movie was absolutely amazing, I loved every moment!" |  Positive |
+| "This was the worst film I've ever seen. Completely boring." |  Negative |
+| "The acting was brilliant and the storyline kept me hooked." |  Positive |
+| "Terrible script, bad direction. Total waste of time." |  Negative |
 
 ---
 
@@ -70,7 +70,7 @@ No manual effort. No delays. Instant results.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -139,7 +139,7 @@ User Input (Raw Review Text)
 
 ---
 
-## 📊 Model Performance
+##  Model Performance
 
 | Metric | Score |
 |--------|-------|
@@ -151,7 +151,7 @@ User Input (Raw Review Text)
 
 ---
 
-## 💻 Installation & Local Setup
+##  Installation & Local Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -188,7 +188,7 @@ http://localhost:8501
 
 ---
 
-## 🚀 Deployment on Render
+##  Deployment on Render
 
 This app is deployed on **Render** as a Web Service. Here's how it was configured:
 
@@ -202,7 +202,7 @@ This app is deployed on **Render** as a Web Service. Here's how it was configure
 
 ---
 
-## 🔮 Future Upgrades
+##  Future Upgrades
 
 Here's what I plan to add to make this project more powerful:
 
@@ -219,7 +219,7 @@ Here's what I plan to add to make this project more powerful:
 
 ---
 
-## 🔗 Where This Can Be Integrated
+##  Where This Can Be Integrated
 
 This model can be plugged into many real-world systems:
 
@@ -248,9 +248,9 @@ Contributions are welcome! If you'd like to improve this project:
 
 **Naveed Nihan**
 
-- 🔗 GitHub: [@naveed8606](https://github.com/naveed8606)
-- 💼 LinkedIn: [Connect with me](https://www.linkedin.com/in/)
-- 🌐 Live App: [sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)
+-  GitHub: [@naveed8606](https://github.com/naveed8606)
+-  LinkedIn: [Connect with me](https://www.linkedin.com/in/)
+-  Live App: [sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)
 
 ---
 
