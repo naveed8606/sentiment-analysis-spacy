@@ -14,7 +14,7 @@
 ---
 
 
-## ❗ Problem Statement
+##  Problem Statement
 
 Businesses receive **thousands of customer reviews every day**. Manually reading and categorizing each one as positive or negative is:
 
@@ -43,7 +43,7 @@ No manual effort. No delays. Instant results.
 
  Try the app live here: **[https://sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)**
 
-> ⚠️ Note: The app is hosted on Render's free tier. It may take a while to wake up if it has been inactive. Please be patient on the first load.
+>  Note: The app is hosted on Render's free tier. It may take a while to wake up if it has been inactive. Please be patient on the first load.
 
 **Example Inputs to Try:**
 
@@ -60,13 +60,13 @@ No manual effort. No delays. Instant results.
 
 | Industry | Application |
 |----------|-------------|
-| 🎬 OTT Platforms (Netflix, Prime Video) | Auto-tag and categorize viewer reviews |
-| 🛒 E-Commerce (Amazon, Flipkart) | Filter and moderate product feedback |
-| 🍽️ Hospitality (Zomato, MakeMyTrip) | Monitor customer satisfaction at scale |
-| 🏦 Banking & Fintech | Analyze customer complaints automatically |
-| 📱 Social Media | Track brand reputation and public opinion |
-| 🏥 Healthcare | Understand patient feedback and improve services |
-| 🎓 EdTech | Analyze student reviews for course improvement |
+|  OTT Platforms (Netflix, Prime Video) | Auto-tag and categorize viewer reviews |
+|  E-Commerce (Amazon, Flipkart) | Filter and moderate product feedback |
+|  Hospitality (Zomato, MakeMyTrip) | Monitor customer satisfaction at scale |
+|  Banking & Fintech | Analyze customer complaints automatically |
+|  Social Media | Track brand reputation and public opinion |
+|  Healthcare | Understand patient feedback and improve services |
+|  EdTech | Analyze student reviews for course improvement |
 
 ---
 
@@ -83,7 +83,7 @@ No manual effort. No delays. Instant results.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 sentiment-analysis-spacy/
@@ -244,7 +244,7 @@ Contributions are welcome! If you'd like to improve this project:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Naveed Nihan**
 
@@ -253,7 +253,3 @@ Contributions are welcome! If you'd like to improve this project:
 -  Live App: [sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)
 
 ---
-
----
-
-⭐ **If you found this project useful, please give it a star on GitHub!** ⭐
