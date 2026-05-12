@@ -248,8 +248,9 @@ Contributions are welcome! If you'd like to improve this project:
 
 **Naveed Nihan**
 
--  GitHub: [@naveed8606](https://github.com/naveed8606)
--  LinkedIn: [Connect with me](https://www.linkedin.com/in/)
--  Live App: [sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)
+- GitHub: [@naveed8606](https://github.com/naveed8606)
+- LinkedIn: [Let's Connect](https://linkedin.com/in/naveed-nihan-73b814277)
+- Gmail : naveednihankm2002@gmail.com
+- Live App: [sentiment-analysis-spacy-1.onrender.com](https://sentiment-analysis-spacy-1.onrender.com)
 
 ---
